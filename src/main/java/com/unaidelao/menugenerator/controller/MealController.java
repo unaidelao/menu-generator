@@ -26,7 +26,7 @@ public class MealController {
     }
 
     @GetMapping("/{mealId}")
-    public Optional<Meal> getById(@PathVariable String mealId) {
+    public Optional<Meal> getMealById(@PathVariable String mealId) {
         return mealRepository.findById(mealId);
     }
 }
