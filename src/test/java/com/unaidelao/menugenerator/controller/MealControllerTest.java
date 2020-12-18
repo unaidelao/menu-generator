@@ -42,4 +42,12 @@ public class MealControllerTest {
         assertEquals(mockMeal, returnedMeal.get());
         verify(repository).findById(testId);
     }
+
+    @Test
+    public void shouldCreateMeal() {
+        // when
+        controller.create(mockMeal);
+        // then
+        verify(repository).insert(mockMeal);
+    }
 }
