@@ -50,4 +50,12 @@ public class MealControllerTest {
         // then
         verify(repository).insert(mockMeal);
     }
+
+    @Test
+    public void shouldGetAllMeals() {
+        // when
+        controller.getAllMeals();
+        // then
+        verify(repository).findAll();
+    }
 }

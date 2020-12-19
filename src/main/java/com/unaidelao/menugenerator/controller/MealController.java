@@ -1,5 +1,6 @@
 package com.unaidelao.menugenerator.controller;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,5 +29,10 @@ public class MealController {
     @GetMapping("/{mealId}")
     public Optional<Meal> getMealById(@PathVariable String mealId) {
         return mealRepository.findById(mealId);
+    }
+
+    @GetMapping("")
+    public List<Meal> getAllMeals() {
+        return mealRepository.findAll();
     }
 }
