@@ -58,4 +58,12 @@ public class MealControllerTest {
         // then
         verify(repository).findAll();
     }
+
+    @Test
+    public void shouldDeleteMealById() {
+        // when
+        controller.deleteMeal(testId);
+        // then
+        verify(repository).deleteById(testId);
+    }
 }
